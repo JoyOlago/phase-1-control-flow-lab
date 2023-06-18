@@ -1,32 +1,35 @@
-let rideInFeet
+let rideInFeet = 2500
 
 function scuberGreetingForFeet(rideInFeet) {
-  if (rideInFeet <= 199) {
+  if (rideInFeet <= 400) {
   return 'This one is on me!';
-} else if (rideInFeet > 2000 && rideInFeet < 2500 ) {
+} else if (rideInFeet > 2000 && rideInFeet <= 2500 ) {
   return 'I will gladly take your thirty bucks.';
 } else if (rideInFeet >2500){
   return 'No can do.'
 }
 }
+console.log(scuberGreetingForFeet(rideInFeet))
 
 let city = 'NYC'
 function ternaryCheckCity(city){
-  if (city === 'NYC') {
-  return ('Ok, sounds good.');
-} else if (city) {
-  return 'No go.'
+return city === 'NYC'? 'Ok, sounds good.': 'No go.'
 }
-}
+console.log(ternaryCheckCity(city))
 
 let tip = 'generous' 
 
 function switchOnCharmFromTip(tip){
- if (tip === 'generous') {
-  return 'Thank you so much.'
- } else if (tip === 'not as generous' ) {
-  return 'Thank you.'
- } else {
-  return 'Bye.'
+ switch(tip) {
+  case tip = 'generous':
+    return 'Thank you so much.';
+ break;
+  case (tip = 'not as generous'):
+    return 'Thank you.';
+ break;
+   default:
+    return 'Bye.';
+  break
  }
 }
+console.log(switchOnCharmFromTip(tip))
